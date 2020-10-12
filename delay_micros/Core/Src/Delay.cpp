@@ -6,7 +6,7 @@
  */
 
 #include "Delay.h"
-#include "main.h"
+
 
 Delay::Delay( TIM_TypeDef *_timer )
 {
@@ -26,7 +26,7 @@ void Delay::start()
 
     if ( HAL_TIM_Base_Init( &timer ) != HAL_OK )
     {
-        Error_Handler();
+
     }
 
     HAL_TIM_Base_Start(&timer);
